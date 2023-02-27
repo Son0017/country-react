@@ -23,6 +23,9 @@ function ConutryList() {
             .toLowerCase()
             .includes(inputChange.toLowerCase());
         });
+        if (inputChange === "") {
+          setData = data;
+        }
       } else if (filter !== "all") {
         setData = data.filter((item) => {
           return item.region.toLowerCase() === filter;
