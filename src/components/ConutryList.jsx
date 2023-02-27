@@ -15,7 +15,7 @@ function ConutryList() {
   useEffect(() => {
     if (data) {
       let setData;
-      if (inputChange === "" && filter === "all") {
+      if (inputChange === "" && filter.toLowerCase() === "all") {
         setData = data;
       } else if (inputChange) {
         setData = data.filter((item) => {
@@ -23,9 +23,6 @@ function ConutryList() {
             .toLowerCase()
             .includes(inputChange.toLowerCase());
         });
-        if (inputChange === "") {
-          setData = data;
-        }
       } else if (filter !== "all") {
         setData = data.filter((item) => {
           return item.region.toLowerCase() === filter;
