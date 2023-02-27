@@ -36,7 +36,7 @@ function FilterCpuntry() {
               changeInput(e.target.value.trim());
             }}
             type="text"
-            className="px-1 focus:outline-none hover:outline-none"
+            className="px-1 focus:outline-none hover:outline-none w-full"
             placeholder="Search for a country…"
           />
         </label>
