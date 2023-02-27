@@ -19,7 +19,9 @@ function ConutryList() {
         setData = data;
       } else if (inputChange) {
         setData = data.filter((item) => {
-          return item.name.common.toLowerCase().includes(inputChange);
+          return item.name.common
+            .toLowerCase()
+            .includes(inputChange.toLowerCase());
         });
       } else if (filter !== "all") {
         setData = data.filter((item) => {
